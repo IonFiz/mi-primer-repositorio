@@ -424,7 +424,38 @@ header nav a:hover{
 
 /* FIN FOOTER */
 
+/* ANIMACIONES */
 
+.contenido .cajacontenido{
+    border: solid 2px;
+    margin: 20px;
+}
+
+.contenido .cajacontenido:hover{
+    background:whitesmoke;
+    color: black;
+}
+
+.contenido .cajacontenido2{
+    border: solid 2px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.contenido .cajacontenido2:hover{
+    box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+
+
+/* FIN ANIMACIONES */
 
 
 .contenedor{
