@@ -1,0 +1,441 @@
+/* MAIN */
+
+body{
+		background-color: black;
+		padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    
+
+}
+
+.contenedor{
+	background-color: black;
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto-fit);
+	
+	grid-template-areas: "header header header"
+					 	"contenido contenido contenido  "
+					 	"footer footer footer ";
+}
+
+/* FIN MAIN */
+
+
+
+/* BARRA DE NAV */
+
+.contenedor .header{
+	background: black;
+	padding: 20px;
+	border-radius: 4px;
+	color: white;
+	grid-area: header;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media (max-width: 768px){
+    .contenedor .header{
+        flex-direction: column;
+    }
+    .contenedor .header{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+  .contenedor .contenido .fondohome {
+    display: none;
+  }
+}
+
+@media (max-width: 768px){
+    .contenedor .footer .grupo-1{
+        display: block;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 740px) {
+  .contenedor .contenido .fondonosotros {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .contenedor .contenido {
+    font-size: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 740px) {
+  .contenedor .contenido .mainequipos  {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .contenedor .contenido .formulario {
+    display: block;
+  }
+}
+
+header nav a{
+	text-decoration: none;
+    margin-right: 20px;
+    color: whitesmoke;
+    transition: all 30mms ease;
+    
+    
+}
+
+header nav a:hover{
+    color: darkred;
+}
+
+.logo{
+    font-size: 30px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: normal;
+    color: whitesmoke; 
+
+}
+
+
+/* FIN BARRA DE NAV */
+
+
+
+
+
+
+
+/* INDEX */
+
+.contenedor .contenido{
+	background: black;
+	padding: 20px;
+	border-radius: 4px;
+	grid-area: contenido;
+	color: white;
+	
+}
+
+.contenedor .contenido .fondohome {
+    background-image: url(../images/fondoslam.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 700px;
+    padding: 20px;
+    
+}
+
+.contenedor .contenido h1{
+	text-align: center;
+	padding: 10px;
+
+}
+
+/* FIN INDEX */
+
+
+
+/* NOSOTROS */
+
+.slogannosotros{
+    color: whitesmoke;
+    background-color: black;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.slogannosotros h1{
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    text-transform: capitalize;
+}
+
+.slogannosotros p{
+    text-align: center;
+    
+    font-size: 20px;
+    padding: 15px;
+}
+
+.fondonosotros{
+    background-image: url(../images/fondonosotros.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 750px;
+}
+
+
+/* FIN NOSOTROS */
+
+
+
+
+
+/* EQUIPOS */
+
+
+.contenido .mainequipos{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;  
+    
+
+}
+
+.contenido .mainequipos .caja-1{
+	border-radius: 2px;
+	border: solid 2px;
+	margin: 20px;
+	padding: 10px;
+}
+
+.contenido .mainequipos .caja-2{
+	border-radius: 2px;
+	border: solid 2px;
+	margin: 20px;
+	padding: 10px;
+}
+
+.contenido .mainequipos h2{
+    color: white;
+    justify-content: center;
+
+}
+
+
+
+
+/* FIN EQUIPOS */
+
+/* REQUISITOS */
+
+.mainrequisitos{
+    height: 700px;
+    background-color: black;
+    color: white;
+    padding: 2px
+
+}
+
+.mainrequisitos h2{
+    color: white;
+    padding: 2px;
+}
+
+.mainrequisitos hr{
+    color: white;
+}
+
+.mainrequisitos ul li {
+    color: white;
+    padding: 2px
+}
+
+/* FIN REQUISITOS */
+
+
+/* CONTACTO */
+
+.formulario{
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.formulario h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+.formulario p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.formulario a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 700;
+}
+
+.formulario a i{
+    color: red;
+    margin-right: 10px;
+}
+
+.formulario form .campo, textarea{
+    width: 90%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+.formulario form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+
+.formulario .btn-enviar{
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: darkred;
+    color: white;
+    border-radius: 3px;
+    cursor:pointer;
+    transition: all 300ms ease;
+    float: right;
+}
+
+.formulario .btn-enviar:hover{
+      animation: pulse 1s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1);
+  100% transform: scale(1); 
+  }
+}
+
+/* FIN CONTACTO */
+
+
+
+
+
+/* FOOTER */
+
+.contenedor .footer{
+	background: black;
+	color: white;
+	padding: 20px;
+	border-radius: 4px;
+	grid-area: footer;
+	
+}
+
+.footer .grupo-1{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    
+}
+
+.footer .grupo-1 .box figure img{
+    width: 250px;
+    
+   
+		
+}
+
+.footer .grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    
+	
+    
+}
+
+.footer .grupo-1 .box p{
+    color: lightgrey;
+    margin-bottom: 10px;
+    
+	
+    
+
+}
+
+.footer .grupo-1 .red-social a{
+    
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: black;
+    text-align: center;
+    transition: all 30mms ease;
+    
+	
+}
+
+
+.footer .grupo-1 .red-social a:hover{
+    color: darkred;
+}
+
+.footer .grupo-2{
+    background-color: black;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+.footer .grupo-2 small{
+    font-size: 15px;
+}
+
+
+/* FIN FOOTER */
+
+
+
+
+.contenedor{
+		grid-template-areas: "header header header"
+					 	"contenido contenido contenido"
+					 	"footer footer footer";
+	}
+	
+	
+}
+
+
+
+
